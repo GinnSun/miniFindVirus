@@ -7,7 +7,7 @@ def findvirus(path, level=1):
     for i in os.listdir(path):
         if os.path.isdir(path+'\\'+i):
             print('Find virus in', path+'\\'+i)
-            findvirus(path + '\\' + i)
+            findvirus(path + '\\' + i, level+1)
         if i in 'virus.txt':
             print('Found virus', path+'\\'+i)
             print('Pls write <<ok>> enter  if you want to delete virus')
